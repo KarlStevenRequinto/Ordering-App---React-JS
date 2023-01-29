@@ -1,4 +1,5 @@
 import React from "react";
+import MealItemForm from "../MealItemForm";
 import "./styles.css";
 
 const MealItem = ({ name, description, price }) => {
@@ -11,7 +12,7 @@ const MealItem = ({ name, description, price }) => {
         <div className="price">{mealPrice}</div>
       </div>
       <div>
-
+        <MealItemForm />
       </div>
     </li>
   );

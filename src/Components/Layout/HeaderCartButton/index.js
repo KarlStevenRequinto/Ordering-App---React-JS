@@ -19,9 +19,13 @@ const HeaderCartButton = ({ onClick }) => {
       return;
     }
     setBtnHighlighted(true);
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       setBtnHighlighted(false);
     }, 300);
+
+    return () => {
+      clearTimeout(timer);
+    };
   }, [items]);
   return (
     <button className={btnClasses} onClick={onClick}>

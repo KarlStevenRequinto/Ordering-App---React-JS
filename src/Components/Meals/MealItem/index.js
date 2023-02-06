@@ -3,11 +3,11 @@ import CartContext from "../../../Store/Cart-Context";
 import MealItemForm from "../MealItemForm";
 import "./styles.css";
 
-const MealItem = ({ name, description, price,id }) => {
+const MealItem = ({ name, description, price, id }) => {
   const mealPrice = `$${price.toFixed(2)}`;
   const cartCtx = useContext(CartContext);
   const onAddToCart = (amount) => {
-    cartCtx.addItem({id:id,name:name,amount:amount,price:price})
+    cartCtx.addItem({ id: id, name: name, amount: amount, price: price });
   };
   return (
     <li className="meal">
